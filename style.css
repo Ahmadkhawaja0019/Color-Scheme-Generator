@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.selector-container {
+    display: flex;
+    max-height: 30px;
+    margin-top: 1em;
+    width: 100%;
+    margin-bottom: .6em;
+}
+
+#color-picker {
+    margin-left: 1em;
+    width: 10%;
+}
+
+#scheme-select {
+    margin-left: 1em;
+    width: 58%;
+}
+
+#get-scheme-btn {
+    margin-left: 1em;
+    width: 25%;
+    padding: .4em .8em;
+    font-weight: 700;
+    background: palegreen;
+    border: none;
+}
+
+#color-display {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "area0 area1 area2 area3 area4";
+    height: 100vh;
+    width: 100%;
+}
+
+.color-display .color0 {
+    grid-area: area0;
+}
+
+.color-display .color1 {
+    grid-area: area1;
+}
+
+.color-display .color2 {
+    grid-area: area2;
+}
+
+.color-display .color3 {
+    grid-area: area3;
+}
+
+.color-display .color4 {
+    grid-area: area4;
+}
