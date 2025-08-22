@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -11,55 +15,60 @@ html, body {
 
 .selector-container {
     display: flex;
-    max-height: 30px;
-    margin-top: 1em;
+    align-items: center; 
+    gap: .75rem;
+    height: 90px;
     width: 100%;
-    margin-bottom: .6em;
+    padding: .5rem 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
 }
 
 #color-picker {
-    margin-left: 1em;
-    width: 10%;
+    width: 15%;
+    height: 42px;
 }
 
 #scheme-select {
     margin-left: 1em;
-    width: 58%;
+    width: 60%;
+    height: 42px;
+    font-size: 1rem;
+    color: #111827;
+    font-weight: 400;
 }
 
 #get-scheme-btn {
     margin-left: 1em;
     width: 25%;
+    height: 42px;
     padding: .4em .8em;
-    font-weight: 700;
-    background: palegreen;
-    border: none;
+    color: #374151;
+    background: #ffffff;
+    font-weight: 550;
+    font-family: "Inter", sans-serif;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    cursor:pointer
 }
 
 #color-display {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "area0 area1 area2 area3 area4";
-    height: 100vh;
+    height: calc(100vh - 90px);
     width: 100%;
 }
 
-.color-display .color0 {
-    grid-area: area0;
+.color-col{
+  display:grid;
+  grid-template-rows: 1fr auto;
 }
 
-.color-display .color1 {
-    grid-area: area1;
-}
-
-.color-display .color2 {
-    grid-area: area2;
-}
-
-.color-display .color3 {
-    grid-area: area3;
-}
-
-.color-display .color4 {
-    grid-area: area4;
+.color-hex{
+  text-align:center;
+  padding: .75rem 0;
+  background:#ffffff;
+  border-top: 1px solid #eeeeee;
+  cursor: pointer;
+  user-select: all; 
 }
